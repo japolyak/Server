@@ -197,3 +197,4 @@ def show_mem_by_id(human_id):
     return jsonify(mem_range)
 
 #poszel nachuj_2.0
+#komment 1.0
