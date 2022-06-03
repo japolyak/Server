@@ -55,19 +55,8 @@ while True:
     x, oper, y = input().split()
 
     try:
-        if x == "M":
-            x = memory
-        try:
-            x = int(x)
-        except ValueError:
-            x = float(x)
-
-        if y == "M":
-            y = memory
-        try:
-            y = int(y)
-        except ValueError:
-            y = float(y)
+        x = in_put(x)
+        y = in_put(y)
 
     except ValueError:
         print(msg_1)
