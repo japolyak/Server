@@ -60,24 +60,22 @@ while True:
 
     if oper == '+':
         result = x + y
-        print(result)
 
     elif oper == '-':
         result = x - y
-        print(result)
 
     elif oper == '*':
         result = x * y
-        print(result)
 
     elif oper == '/':
         try:
             result = x / y
-            print(result)
 
         except ZeroDivisionError:
             print(msg_3)
             continue
+
+    print(result)
 
     while True:
         print(msg_4)
