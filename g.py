@@ -37,10 +37,8 @@ def time(x):
         print(f"It will take {int(years)} years and {months - int(years) * 12} months to repay this loan!")
         break
 
-    return answer
 
-
-def n_mothly_fayments(x, y, z):
+def n_monthly_payments(x, y, z):
     i = z / 1200
     n = log((y / (y - i * x)), i + 1)
 
@@ -57,12 +55,12 @@ def n_mothly_fayments(x, y, z):
             print(f"It will take {n} months to repay this loan!")
             break
 
-        elif 11 < n < 12:
+        elif 11 < n < 12 or 23 < n < 24:
 
-            if n % 1 != 0:
-                n = int(n) + 1
-
-            print("It will take 1 year to repay this loan!")
+            if n // 1 == 11:
+                print("It will take 1 year to repay this loan!")
+                break
+            print("It will take 2 years to repay this loan!")
             break
 
         elif n % 12 == 0:
@@ -76,15 +74,17 @@ def n_mothly_fayments(x, y, z):
             time(n)
             break
 
-    return
+
+def ann_m_payment_amount(x, y, z):
+    i = z / 1200
+    a = x * (i * (1 + i) ** y) / ((1 + i) ** y - 1)
+    print(f"Your monthly payment = {int(a) + 1}!")
 
 
-def ann_m_payment_amount(x, y, i):
-    return answer
-
-
-def loan_principal(x, y, i):
-    return answer
+def loan_principal(x, y, z):
+    i = z / 1200
+    a = x / ((i * (1 + i) ** y) / ((1 + i) ** y - 1))
+    print(f"Your loan principal = {int(a)}!")
 
 
 print(f"""What do you want to calculate?
@@ -100,9 +100,9 @@ if answer == "n":
     print("Enter the monthly payment:")
     m_payment = int(input())
     print("Enter the loan interest:")
-    loan_int = int(input())
+    loan_int = float(input())
 
-    n_mothly_fayments(loan_prin, m_payment, loan_int)
+    n_monthly_payments(loan_prin, m_payment, loan_int)
 
 elif answer == "a":
     print("Enter the loan principal:")
@@ -110,9 +110,9 @@ elif answer == "a":
     print("Enter the number of periods:")
     n_periods = int(input())
     print("Enter the loan interest:")
-    loan_int = int(input())
+    loan_int = float(input())
 
-    n_mothly_fayments(loan_prin, n_periods, loan_int)
+    ann_m_payment_amount(loan_prin, n_periods, loan_int)
 
 elif answer == "p":
     print("Enter the annuity payment:")
