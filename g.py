@@ -1,7 +1,7 @@
 from math import log
 
 #3
-
+#proces od working....
 def time(x):
     years = x / 12
 
