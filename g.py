@@ -1,5 +1,7 @@
 from math import log
-#dev
+
+#3
+#dev - trudno
 #the left text
 
 def time(x):
