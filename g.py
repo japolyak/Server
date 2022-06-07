@@ -1,6 +1,6 @@
 from math import log
 
-#2
+#the left text
 
 def time(x):
     years = x / 12
