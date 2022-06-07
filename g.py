@@ -1,5 +1,5 @@
 from math import log
-
+#dev
 #the left text
 
 def time(x):
