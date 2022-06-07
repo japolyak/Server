@@ -1,8 +1,7 @@
 from math import log
 
 #3
-#dev - trudno
-#the left text
+#updating main
 
 def time(x):
     years = x / 12
