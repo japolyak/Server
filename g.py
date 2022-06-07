@@ -1,6 +1,6 @@
 from math import log
 
-#games with merge
+#2
 
 def time(x):
     years = x / 12
