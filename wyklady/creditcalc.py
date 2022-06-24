@@ -1,10 +1,24 @@
+import sys
+import argparse
 from math import log
 
-p = 500000
-n = 120
-interest = 7.8
-i = interest / (12 * 100)
-annuity_payment = 23000
+
+args = sys.argv
+first_num = float(args[1])
+second_num = float(args[2])
+third_num = float(args[3])
+c = first_num+second_num+third_num
+print(c)
+
+
+if len(args) < 4:
+    print("Incorrect parametrs.")
+
+# p = 500000
+# n = 120
+# interest = 7.8
+# i = interest / (12 * 100)
+# annuity_payment = 23000
 
 
 def d_m(x, y, z):
@@ -76,6 +90,7 @@ def n_payments(x, y, z):
     while True:
         if n <= 1:
             print("It will take 1 month to repay this loan!")
+            n = 1
             break
 
         elif 1 < n <= 11:
@@ -99,6 +114,7 @@ def n_payments(x, y, z):
         elif n % 12 == 0:
             if n / 12 == 1:
                 print("It will take 1 year to repay this loan!")
+                n = 12
                 break
             print(f"It will take {int(n / 12)} years to repay this loan!")
             break
