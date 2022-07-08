@@ -195,7 +195,3 @@ def show_mem_by_id(human_id):
         }
         mem_range.append(mem_i)
     return jsonify(mem_range)
-
-#poszel nachuj_2.0
-#komment 1.0
-#kiska3
