@@ -185,7 +185,7 @@ def show_mem_by_id(human_id):
         raise APIError(404, 'The id doesn\'t exist')
 
     mem_range = []
-    cur.execute("select id, name, sname from mems where person_id = ?;", (by_id, ))
+    cur.execute("select id, name, link from mems where person_id = ?;", (by_id, ))
     for (id_m, name, link, person_id) in cur:
         mem_i = {
             'id': id_m,
